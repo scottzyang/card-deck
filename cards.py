@@ -29,4 +29,22 @@ class Deck:
         # test to see if cards list was populated
         # for card in self.cards:
         #     print(card.value, card.suit, card.color)
-                
+
+    def shuffle(self):
+        random.shuffle(self.cards)
+        # for card in self.cards:
+        #     print(card.value, card.suit, card.color)
+
+    def draw(self):
+        print(self.cards[0].suit, self.cards[0].value, self.cards[0].color)
+        # print(self.cards[51].suit, self.cards[51].value, self.cards[51].color)
+        self.cards.append(self.cards.pop(0))
+        # print(self.cards[0].suit, self.cards[0].value, self.cards[0].color)
+        # print(self.cards[51].suit, self.cards[51].value, self.cards[51].color)
+
+newDeck = Deck()
+newDeck.create_deck()
+newDeck.shuffle()
+newDeck.draw()
+newDeck.draw()
+newDeck.draw()
